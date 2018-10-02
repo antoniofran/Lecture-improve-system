@@ -1,0 +1,10 @@
+CREATE TABLE `Institution.Institution3`
+(
+	`ID`		INT		NOT NULL	AUTO_INCREMENT
+,	`Active`	TINYINT		NOT NULL	DEFAULT 1
+,	`DateCreated`	DATETIME	NOT NULL	DEFAULT NOW()
+,	`TestID`	INT		NOT NULL
+,	`Code`		VARCHAR(255)	NULL
+,	PRIMARY KEY (`ID`) 
+,	FOREIGN KEY (`TestID`) REFERENCES `test` (`ID`)
+);
